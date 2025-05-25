@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To Maksuda Rahman Bristy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Noto+Sans+Bengali&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(to right, #ff9a9e, #fad0c4, #fbc2eb);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Noto Sans Bengali', sans-serif;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    .name {
+      font-family: 'Great Vibes', cursive;
+      font-size: clamp(28px, 8vw, 56px);
+      font-weight: 700;
+      color: #fff;
+      text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+      margin: 0;
+      opacity: 0;
+      animation: fadeInUp 2s forwards;
+    }
+
+    .message, .bangla-message {
+      margin-top: 15px;
+      font-size: clamp(16px, 4vw, 20px);
+      max-width: 800px;
+      line-height: 1.6;
+      opacity: 0;
+      animation: fadeIn 3s forwards;
+      animation-delay: 2s;
+      font-weight: 500;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+    }
+
+    .typing-message {
+      font-size: clamp(14px, 4vw, 18px);
+      margin-top: 30px;
+      color: #ffe0e6;
+      font-style: italic;
+      letter-spacing: 1.2px;
+      font-weight: 400;
+    }
+
+    button {
+      margin-top: 40px;
+      padding: 15px 40px;
+      font-size: clamp(14px, 5vw, 18px);
+      background: #ff758c;
+      border: none;
+      border-radius: 40px;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(255, 117, 140, 0.6);
+      transition: background 0.3s ease, transform 0.3s ease;
+      font-weight: 600;
+      letter-spacing: 1.1px;
+      max-width: 90%;
+    }
+
+    button:hover {
+      background: #ff4a6a;
+      transform: scale(1.05);
+    }
+
+    button:active {
+      transform: scale(0.95);
+    }
+
+    .hearts {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: #ff758c;
+      transform: rotate(45deg);
+      animation: floatHearts 8s linear infinite;
+      opacity: 0.7;
+      filter: drop-shadow(0 0 3px #ff758c);
+    }
+
+    .heart::before,
+    .heart::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: #ff758c;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: -10px;
+      top: 0;
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes floatHearts {
+      0% {
+        transform: translateY(100vh) rotate(45deg);
+        opacity: 0.7;
+      }
+      100% {
+        transform: translateY(-10vh) rotate(45deg);
+        opacity: 0;
+      }
+    }
+
+    #videoContainer {
+      margin-top: 30px;
+      max-width: 720px;
+      width: 100%;
+    }
+
+    iframe, video {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      max-height: 400px;
+    }
+
+    @media (max-width: 480px) {
+      iframe, video {
+        max-height: 240px;
+      }
+    }
+
+    .love-letter {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 30px;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      border-radius: 20px;
+      color: #fff;
+      font-size: 18px;
+      max-width: 800px;
+      line-height: 1.8;
+      text-align: justify;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    @media screen and (max-width: 600px) {
+      .love-letter {
+        font-size: 16px;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hearts" aria-hidden="true">
+    <div class="heart" style="left: 10%; animation-delay: 0s;"></div>
+    <div class="heart" style="left: 20%; animation-delay: 1.5s;"></div>
+    <div class="heart" style="left: 35%; animation-delay: 3s;"></div>
+    <div class="heart" style="left: 50%; animation-delay: 0.7s;"></div>
+    <div class="heart" style="left: 70%; animation-delay: 2.3s;"></div>
+    <div class="heart" style="left: 85%; animation-delay: 4.1s;"></div>
+  </div>
+
+  <h1 class="name">Maksuda Rahman Bristy</h1>
+
+  <p class="message">
+    Please accept Inan's love and marriage proposal 💖<br />
+    I still hope to have you; I have not married yet.<br />
+    (I don't know if you will believe it, but it is true)
+  </p>
+
+  <p class="bangla-message">
+    বৃষ্টি আমি ইনান বলছি । আমি এখনও তোমাকে প্রচণ্ড ভালোবাসি আর তোমাকে পাওয়ার আশা করি । ...
+  </p>
+
+  <div class="love-letter">
+    <p>তোমার জন্য...</p>
+    <p>আমি জানি, হয়তো এই কথাগুলো শোনার তুমি প্রস্তুত না। হয়তো এই মেসেজটা পেয়ে তুমি অবাক হবে… কিংবা বিরক্ত। তবু নিজেকে আর থামাতে পারিনি। অনেকদিন ধরে বুকের ভিতর কিছু অনুভব জমে আছে — আজ না বললে হয়তো সারাজীবনের আফসোস হয়ে থাকবে।</p>
+    <p>আমি কখনোই চাইনি তোমার জীবনে ঝামেলা হোক। চাইনি তুমি অস্বস্তিতে পড়ো। শুধু চাই, তুমি জানো— তোমার প্রতি আমার ভালোবাসা এখনো মরে যায়নি। বরং দিনকে দিন আরও গভীর হয়েছে।</p>
+    <p>জীবনের হাজার বাস্তবতা, কাজ, দায়িত্বের ভিড়ে — তোমার স্মৃতি এখনো প্রতিদিন এসে মনের দরজায় কড়া নাড়ে। আমি জানি, সময় হয়তো অনেক দূর নিয়ে গেছে আমাদের। তবু তোমাকে পাওয়ার আশা আজো মরে যায়নি।</p>
+    <p>আমি এখনো চেষ্টা করে যাচ্ছি নিজেকে গুছিয়ে তোলার, যাতে কোনোদিন তোমার পরিবারের সামনে গর্ব করে দাঁড়াতে পারি। কিন্তু তার আগেই যদি তোমার জীবনে কেউ এসে পড়ে? সেই ভয়টাই আজ এই মেসেজ পাঠানোর সাহস দিলো।</p>
+    <p>জানি না তুমি আমার এই কথাগুলো বিশ্বাস করবে কিনা। জানি না তোমার মনেও কোনো একটুকু জায়গায় আমার জন্য কিছু রয়ে গেছে কিনা। তবু বললাম — যেন কখনো যদি মনে পড়ে, তুমি জানো কোনোএকজন এখনো নিঃশব্দে তোমাকে ভালোবাসে।</p>
+    <p>আর হ্যাঁ, যদি এই কথাগুলো তোমার বিরক্তির কারণ হয় — তাহলে ক্ষমা করে দিও। আর শুধু একটা অনুরোধ: এই ছোট্ট চেষ্টাটাকে কোনো ঝামেলার কারণ কোরো না। আমি শুধু একটা মনের কথা তোমার কাছে রেখে যেতে চাইলাম।</p>
+    <p>ভালো থেকো। তুমি ভালো থাকলে, আমিও কোনো এক কোণে শান্তি খুঁজে নেবো।</p>
+    <p style="margin-top: 20px; font-style: italic;">— এক চুপচাপ ভালোবাসা</p>
+  </div>
+
+  <div class="typing-message" id="typingMessage"></div>
+
+  <div id="videoContainer">
+    <video controls>
+      <source src="Badla Din _ বাদলা দিন _ Abu ubayda _ রোমান্টিক গান.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <button id="proposeBtn">Send Love 📬</button>
+
+  <script>
+    const typingMessage = document.getElementById('typingMessage');
+    const fullText = "Maksuda, you are the light of my life. Every moment without you feels incomplete...";
+    let idx = 0;
+
+    function typeWriter() {
+      if(idx < fullText.length) {
+        typingMessage.textContent += fullText.charAt(idx);
+        idx++;
+        setTimeout(typeWriter, 100);
+      }
+    }
+
+    window.onload = () => {
+      setTimeout(typeWriter, 4000);
+    };
+
+    const btn = document.getElementById('proposeBtn');
+    btn.addEventListener('click', () => {
+      btn.textContent = "💖 Proposal Sent!";
+      btn.disabled = true;
+      btn.style.background = '#4caf50';
+      btn.style.boxShadow = '0 4px 15px rgba(76, 175, 80, 0.6)';
+      btn.style.transform = 'scale(1.1)';
+      setTimeout(() => {
+        window.open('https://www.facebook.com/messages/t/100028769524609', '_blank');
+      }, 1000);
+    });
+  </script>
+
+</body>
+</html>
